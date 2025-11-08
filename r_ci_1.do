@@ -1,4 +1,4 @@
-/* Code to estimate 95% confidence intervals for various r values given a fixed number of samples
+/* Code to estimate 95% confidence intervals for various r values given a fixed number of samples (N = 38)
 ADH 01/11/25
 */
 
