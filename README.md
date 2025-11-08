@@ -1,2 +1,2 @@
 # Statistics_Teaching
-Code related to departmental statistics teaching
+Code related to PSEM departmental statistics teaching
