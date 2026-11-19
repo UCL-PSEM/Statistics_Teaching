@@ -11,8 +11,8 @@ pwr_result <- pwr.t.test(d = d,
                          type = "two.sample",
                          alternative = "two.sided")
 
-# Extract the sample size per group
-pwr_result$n
+# Extract the sample size per group (rounded up to a whole participant)
+ceiling(pwr_result$n)
 
 # adjust for no attrition
 n_adjusted <- ceiling(pwr_result$n / 1)
