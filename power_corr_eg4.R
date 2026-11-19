@@ -7,7 +7,10 @@ n <- 38         # sample size
 alpha <- 0.05   # significance level
 
 # Compute power
-pwr_result <- pwr.r.test(r = r, n = n, sig.level = alpha)
+pwr_result <- pwr.r.test(r = r,
+                         n = n,
+                         sig.level = alpha,
+                         alternative = "two.sided")
 
 # Show result
 pwr_result
