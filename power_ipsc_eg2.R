@@ -1,19 +1,25 @@
 # Load the package
 library(pwr)
 
+# Inputs
+mean_diff <- 25    # expected difference between group means
+sd_pooled <- 10    # pooled standard deviation of the two groups
+alpha     <- 0.05  # significance level
+power     <- 0.90  # target power
+
 # calculate the effect size (d)
-d <- 25 / 10  # d = mean difference / SD
+d <- mean_diff / sd_pooled  # d = mean difference / SD
 
 # Run the power analysis and STORE the result in 'pwr_result'
 pwr_result <- pwr.t.test(d = d,
-                         sig.level = 0.05,
-                         power = 0.90,
+                         sig.level = alpha,
+                         power = power,
                          type = "two.sample",
                          alternative = "two.sided")
 
 # Extract the sample size per group (rounded up to a whole participant)
-ceiling(pwr_result$n)
+n_per_group <- ceiling(pwr_result$n)
+n_per_group
 
-# adjust for no attrition
-n_adjusted <- ceiling(pwr_result$n / 1)
-n_adjusted * 2
+# Total sample size across both groups
+2 * n_per_group
