@@ -9,7 +9,7 @@ display "Allowing for 10% loss to follow-up, N(total) = " ceil(r(N)/0.9)
 display "Allowing for 10% loss to follow-up, N per group = " ceil(r(N)/(0.9*2))
 
 * Example 2: A small laboratory study
-power twomeans 145, sd(10) diff(25) alpha(0.05) power(0.9)
+power twomeans 50, sd(10) diff(25) alpha(0.05) power(0.9)
 
 * Example 3A: a fixed sample size (detectable effect size)
 power onecorrelation 0, power(0.9) n(38) alpha(0.05)
