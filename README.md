@@ -1,5 +1,5 @@
 # Statistics_Teaching
-Code related to PSEM departmental statistics teaching on **Sample Size and Power Calculations**
+Code related to ICS teaching on **Sample Size and Power Calculations**
 
 ## Stata code
 power_1.do: do file for **examples 1, 2, 3A and 3B**
